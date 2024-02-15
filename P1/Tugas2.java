@@ -40,7 +40,7 @@ public class Tugas2 {
         return menu;
     }
     static void kecepatan(int s, int t){
-        int v = s/t;
+        double v = (double)s/t;
         System.out.println("Kecepatannya adalah "+v+" m/detik");
     }
     static void jarak(int v, int t){
