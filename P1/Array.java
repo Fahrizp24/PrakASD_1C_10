@@ -6,10 +6,11 @@ public class Array {
         String[] matkul = {"Pancasila","Konsep Teknologi Informasi"
         , "CTPS", "Matematika Dasar", "Bahasa INggris","Dasar Pemrograman","Praktikum dasar Pemrograman","Keselamatan dan Kesehatan Kerja"};
         int nilaiAngka[]=new int[8];
+        String[] format = {"Mata Kuliah","Nilai Angka","Nilai Huruf","Bobot Nilai"}; 
         String nilaiHuruf[]= new String[8];
         int sks[]={2,2,2,3,2,2,3,2};
         double bobotnilai[]=new double[8];
-        int ip;
+        double ip;
         for (int i = 0; i < matkul.length; i++) {
             System.out.print("Masukkan nilai angka untuk MK "+matkul[i]+": ");
             nilaiAngka[i]=input10.nextInt();
@@ -38,11 +39,12 @@ public class Array {
                 bobotnilai[i]=4;
             }
         }
-        System.out.println();
+        System.out.printf("%-33s %-11s %-11s %-11s %s%n", format[0], format[1], format[2], format[3],"");
         for (int i = 0; i < matkul.length; i++) {
-            System.out.printf("%-25s %-11i %-11s %-11d %n", matkul[i],nilaiAngka[i],nilaiHuruf[i],bobotnilai[i] );
+            System.out.printf("%-33s %-11d %-11s %-3f %n", matkul[i], nilaiAngka[i], nilaiHuruf[i], bobotnilai[i]);
         }
-        int total=0;
+
+        double total=0;
         for (int i = 0; i < bobotnilai.length; i++) {
             total+=bobotnilai[i]*sks[i];
         }
