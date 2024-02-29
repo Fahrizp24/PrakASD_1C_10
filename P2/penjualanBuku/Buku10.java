@@ -10,10 +10,13 @@ public class Buku10 {
         System.out.println("Jumlah halaman: "+halaman);
         System.out.println("Sisa stok: "+stok);
         System.out.println("Harga: "+harga);
+        System.out.println();
     }
     void terjual(int jml){
-        if (stok>0) {
+        if (stok>0||stok>=jml) {
             stok-=jml;
+        }else{
+            System.out.println("Penjualan "+jml+" buah tidak bisa dilaksanakan karena stok habis atau stok tidak memadai");
         }
     }
     void restock(int jml){
