@@ -18,6 +18,8 @@ public class BukuMain10 {
         bk2.terjual(11);
         bk2.tampilInformasi();
         
+        Buku10 bukuFahri = new Buku10("Endless Happiness", "Fahri Zanuar Pradian", 342, 24,100000);
+        bukuFahri.tampilInformasi();
     }
     
 }
