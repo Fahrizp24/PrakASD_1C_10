@@ -19,6 +19,6 @@ public class Dragon10 {
        
     }
     void detectCollision(int x, int y){
-        System.out.println("ANDA KLAH MUAHAHAHAHAHAH");
+        System.out.println("Game Over");
     }
 }
