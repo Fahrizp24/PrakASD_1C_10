@@ -13,5 +13,14 @@ public class BukuMain10 {
         bk1.terjual(5);
         bk1.gantiHarga(60000);
         bk1.tampilInformasi();
+        
+        Buku10 bk2 = new Buku10();
+        bk2.judul="How To Train Your dragon";
+        bk2.pengarang="Cressida Cowell";
+        bk2.halaman=432;
+        bk2.stok=0;
+        bk2.harga=275000;
+        bk2.tampilInformasi();
     }
+    
 }
