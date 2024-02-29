@@ -21,18 +21,41 @@ public class Buku10 {
         System.out.println("Harga: "+harga);
         System.out.println();
     }
-    void terjual(int jml){
-        if (stok>0||stok>=jml) {
+    int terjual(int jml){
+        int biaya=0;
+        if (stok>0&&stok>=jml) {
             stok-=jml;
+            biaya=jml;
         }else{
             System.out.println("Penjualan "+jml+" buah tidak bisa dilaksanakan karena stok habis atau stok tidak memadai");
         }
+        return biaya;
     }
-    void restock(int jml){
+    int restock(int jml){
         stok+=jml;
+        return stok;
     }
     void gantiHarga(int hrg){
         harga=hrg;
+    }
+    int hitungHargaTotal(int jml, int hrg){
+        int hargaTotal=jml*hrg;
+        return hargaTotal;
+    }
+    int hitungDiskon(int hargaTotal){
+        double hargaDiskon=0;
+        if (hargaTotal>150000) {
+            hargaDiskon=hargaTotal*0.12;
+        }else if (hargaTotal>=75000&&hargaTotal<=150000) {
+            hargaDiskon=hargaTotal*0.05;
+        }else if (hargaTotal<75000) {
+            hargaDiskon=hargaTotal;
+        }
+        return (int)hargaDiskon;
+    }
+    int hitungHargaBayar(int hargaTotal, int hargaDiskon){
+        int hargaBayar=hargaTotal-hargaDiskon;
+        return hargaBayar;
     }
 }
 
