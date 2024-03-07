@@ -1,8 +1,5 @@
 package P3.AOBMahasiswa;
 
-/**
- * DataMahasiswa10
- */
 public class DataMahasiswa10 {
     String nama, nim;
     char jenisKelamin;
@@ -18,5 +15,4 @@ public class DataMahasiswa10 {
         }
         return ipkterbesar;
     }
-
 }
