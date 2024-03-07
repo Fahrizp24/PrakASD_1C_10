@@ -14,6 +14,7 @@ public class ArrayOBjects10 {
             System.out.print("Masukkan Lebar: ");
             ppArray[i].lebar=input10.nextInt();
         }
+        ppArray[0] = new PersegiPanjang10();
         for (int i = 0; i < ppArray.length; i++) {
             System.out.println("Persegi Panjang ke-"+i);
             System.out.println("Panjang: "+ppArray[i].panjang+", lebar: "+ppArray[i].lebar);
@@ -37,6 +38,5 @@ public class ArrayOBjects10 {
         }
         Persegi10[] pgArray = new Persegi10[100];
         pgArray[5].sisi=20;
-
     }
 }
