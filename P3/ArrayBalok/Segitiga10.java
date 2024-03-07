@@ -7,4 +7,11 @@ public class Segitiga10 {
         alas = a;
         tinggi=t;
     }
+    public double hitungLuas(){
+        return (alas*tinggi/2);
+    }
+    public double hitungKeliling(){
+        keliling= Math.sqrt(alas*alas+tinggi*tinggi);
+        return keliling;
+    }       
 }
