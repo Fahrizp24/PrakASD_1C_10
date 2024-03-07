@@ -7,7 +7,17 @@ public class Balok10 {
         lebar=l;
         tinggi=t;
     }
+    public Balok10(){
+
+    }
+    public Balok10(int p,int l){
+        panjang=p;
+        lebar=l;
+    }
     public int hitungVolume(){
         return panjang*lebar*tinggi;
+    }
+    public int hitungLuas(){
+        return panjang*lebar;
     }
 }
