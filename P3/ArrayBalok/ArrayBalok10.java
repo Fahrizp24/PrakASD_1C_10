@@ -16,6 +16,10 @@ public class ArrayBalok10 {
         sgArray10[1]=new Segitiga10(20, 10);
         sgArray10[2]=new Segitiga10(15, 6);
         sgArray10[3]=new Segitiga10(25, 10);
+        for (int i = 0; i < sgArray10.length; i++) {
+            System.out.println("Luas segitiga ke-"+i+": "+sgArray10[i].hitungLuas());
+            System.out.println("Keliling segitiga ke-"+i+": "+sgArray10[i].hitungKeliling());
+        }
     }
     
 }
