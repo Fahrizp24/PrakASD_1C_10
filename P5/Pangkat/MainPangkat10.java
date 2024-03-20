@@ -17,14 +17,26 @@ public class MainPangkat10 {
             pk[i]=new Pangkat10(angka,nilai);
 
         }
-        System.out.println("HASIL PANGKAT - BRUTE FORCE");
-        for (int i = 0; i < pk.length; i++) {
-            System.out.println("Hasil dari "+pk[i].nilai+" pangkat "+pk[i].pangkat+" adalah"+pk[i].PangkatBF(pk[i].nilai, pk[i].pangkat));
+        System.out.println("Pilih Metode\n1. Brute Force\n2. Divide and Conquer");
+        int metode = input10.nextInt();
+        switch (metode) {
+            case 1:
+                System.out.println("HASIL PANGKAT - BRUTE FORCE");
+                for (int i = 0; i < pk.length; i++) {
+                    System.out.println("Hasil dari "+pk[i].nilai+" pangkat "+pk[i].pangkat+" adalah"+pk[i].PangkatBF(pk[i].nilai, pk[i].pangkat));
+                }
+                break;
+            case 2:
+                System.out.println("HASIL PANGKAY - DIVIDE ");
+                for (int i = 0; i < pk.length; i++) {
+                System.out.println("Hasil dari "+pk[i].nilai+" pangkat "+pk[i].pangkat+" adalah"+pk[i].PangkatDC(pk[i].nilai, pk[i].pangkat));
+                 }
+                break;
+            default:
+                break;
         }
-        System.out.println("HASIL PANGKAY - DIVIDE ");
-        for (int i = 0; i < pk.length; i++) {
-            System.out.println("Hasil dari "+pk[i].nilai+" pangkat "+pk[i].pangkat+" adalah"+pk[i].PangkatDC(pk[i].nilai, pk[i].pangkat));
-        }
+        
+        
 
     }
 }
