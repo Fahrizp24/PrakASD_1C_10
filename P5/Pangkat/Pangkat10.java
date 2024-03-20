@@ -19,4 +19,8 @@ public class Pangkat10 {
                 return (PangkatDC(a, n/2)*PangkatDC(a, n/2));
         }
     }
+    Pangkat10(int nilai, int pangkat){
+        this.nilai=nilai;
+        this.pangkat=pangkat;
+    }
 }

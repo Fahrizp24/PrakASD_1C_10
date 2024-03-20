@@ -10,11 +10,12 @@ public class MainPangkat10 {
         int jml = input10.nextInt();
         Pangkat10 pk [] = new Pangkat10[jml];
         for (int i = 0; i < pk.length; i++) {
-            pk[i]=new Pangkat10();
             System.out.print("Masukkan angka: ");
-            pk[i].nilai=input10.nextInt();
+            int angka =input10.nextInt();
             System.out.print("Masukkan nilai pangkat: ");
-            pk[i].pangkat=input10.nextInt();            
+            int nilai =input10.nextInt();            
+            pk[i]=new Pangkat10(angka,nilai);
+
         }
         System.out.println("HASIL PANGKAT - BRUTE FORCE");
         for (int i = 0; i < pk.length; i++) {
