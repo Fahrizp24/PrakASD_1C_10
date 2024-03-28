@@ -41,4 +41,15 @@ public class DaftarBuku10 {
             listBk[i]=tempBk;
         }
     }
+    void insertionSort (){
+        for (int i = 1; i < listBk.length; i++) {
+            Buku10 tempBk = listBk[i];
+            int j = i;
+            while (j>0 && listBk[j-1].stock>tempBk.stock) {
+                listBk[j]=listBk[j-1];
+                j--;
+            }               
+            listBk[j]=tempBk;
+        }
+    }
 }
