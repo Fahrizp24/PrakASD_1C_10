@@ -17,10 +17,18 @@ public class MainBuku10 {
         System.out.println("======================");
         System.out.println("Data Sebelum Diurutkan");
         listBuku.tampil();
+        System.out.println();
 
         System.out.println("======================");
-        System.out.println("Data setelah diurutkan secara Asc berdasarkan sock");
+        System.out.println("Data setelah diurutkan secara Asc berdasarkan stock menggunakan bubble sort");
         listBuku.bubbleSort();
         listBuku.tampil();
+        System.out.println();
+
+        System.out.println("======================");
+        System.out.println("Data setelah diurutkan secara Desc berdasarkan stock menggunakan selection sort");
+        listBuku.selectionSort();
+        listBuku.tampil();
+        System.out.println();
     }
 }

@@ -28,4 +28,17 @@ public class DaftarBuku10 {
             }
         }
     }
+    void selectionSort(){
+        for (int i = 0; i < listBk.length-1; i++) {
+            int idxMin = i;
+            for (int j = i+1; j < listBk.length; j++) {
+                if (listBk[j].stock>listBk[idxMin].stock) {
+                    idxMin=j;
+                }   
+            }
+            Buku10 tempBk = listBk[idxMin];
+            listBk[idxMin]=listBk[i];
+            listBk[i]=tempBk;
+        }
+    }
 }
