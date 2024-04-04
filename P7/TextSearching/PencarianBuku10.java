@@ -48,4 +48,12 @@ public class PencarianBuku10 {
             System.out.println("Data "+x+" tidak ditemukan");
         }
     }
+    public Buku10 FindBuku(int cari){
+        int buku = FindseqSearch(cari);
+        if (buku!=-1) {
+            return listBk[buku];
+        }else{
+            return null;
+        }
+    }
 }

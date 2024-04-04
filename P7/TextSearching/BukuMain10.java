@@ -36,5 +36,12 @@ public class BukuMain10 {
         int posisi = data.FindseqSearch(cari);
         data.TampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
+        System.out.println("Menggunakan Method Find Buku");
+        Buku10 dataBuku = data.FindBuku(cari);
+        if (dataBuku!=null) {
+            dataBuku.tampilDataBuku();            
+        } else{
+            System.out.println("Data tidak ditemukan");
+        }
     }
 }
