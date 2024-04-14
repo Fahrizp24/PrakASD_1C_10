@@ -19,10 +19,10 @@ public class PencarianBuku10 {
         }
     }
 
-    public int FindseqSearch (int cari){
+    public int FindseqSearch (String cari){
         int posisi = -1;
         for (int i = 0; i < listBk.length; i++) {
-            if (listBk[i].kodeBuku==cari) {
+            if (cari.compareToIgnoreCase(listBk[i].kodeBuku)==0) {
                 posisi=i;
                 break;
             }
@@ -30,14 +30,14 @@ public class PencarianBuku10 {
         return posisi;
     }
 
-    public void TampilPosisi (int x, int pos){
+    public void TampilPosisi (String x, int pos){
         if (pos!=-1) {
             System.out.println("Data "+x+" ditemukan pada index "+pos);
         }else{
             System.out.println("Data "+x+" tidak ditemukan");
         }
     }
-    public void tampilData (int x, int pos){
+    public void tampilData (String x, int pos){
         if (pos!=-1) {
             System.out.println("Kode Buku\t: "+x);
             System.out.println("Judul\t\t: "+listBk[pos].judulBuku);
@@ -45,10 +45,10 @@ public class PencarianBuku10 {
             System.out.println("pengarang\t: "+listBk[pos].pengarang);
             System.out.println("Stock\t\t: "+listBk[pos].stock);
         }else{
-            System.out.println("Data "+x+" tidak ditemukan");
+            // System.out.println("Data "+x+" tidak ditemukan");
         }
     }
-    public Buku10 FindBuku(int cari){
+    public Buku10 FindBuku(String cari){
         int buku = FindseqSearch(cari);
         if (buku!=-1) {
             return listBk[buku];
@@ -56,13 +56,13 @@ public class PencarianBuku10 {
             return null;
         }
     }
-    public int FindBinarySearch (int cari, int left, int right){
+    public int FindBinarySearch (String cari, int left, int right){
         int mid;
         if (right>=left) {
             mid=(left+right)/2;
-            if (cari==listBk[mid].kodeBuku) {
+            if (cari.compareToIgnoreCase(listBk[mid].kodeBuku)==0) {
                 return (mid);
-            } else if (listBk[mid].kodeBuku<cari) {
+            } else if (listBk[mid].kodeBuku.compareToIgnoreCase(cari)<0) {
                 return FindBinarySearch(cari, left, mid-1);
             } else {
                 return FindBinarySearch(cari, mid+1, right);
@@ -70,4 +70,17 @@ public class PencarianBuku10 {
         }
         return -1;
     }
+    
+    public void BubbleSort(){
+        for (int i = 0; i < listBk.length-1; i++) {
+            for (int j = 0; j < listBk.length-1; j++) {
+                if (listBk[j].kodeBuku.compareTo(listBk[j+1].kodeBuku)>0) {
+                    Buku10 tempBk = listBk[j];
+                    listBk[j]=listBk[j+1];
+                    listBk[j+1]=tempBk;
+                }
+            }
+        }
+    }
+   
 }
