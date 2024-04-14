@@ -39,7 +39,7 @@ public class PencarianBuku10 {
     }
     public void tampilData (String x, int pos){
         if (pos!=-1) {
-            System.out.println("Kode Buku\t: "+x);
+            System.out.println("Kode Buku\t: "+listBk[pos].kodeBuku);
             System.out.println("Judul\t\t: "+listBk[pos].judulBuku);
             System.out.println("Tahun Terbit \t: "+listBk[pos].tahunTerbit);
             System.out.println("pengarang\t: "+listBk[pos].pengarang);
@@ -70,11 +70,46 @@ public class PencarianBuku10 {
         }
         return -1;
     }
-    
-    public void BubbleSort(){
+
+    public int FindBinarySearchJudBuku (String cari, int left, int right){
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (cari.compareToIgnoreCase(listBk[mid].judulBuku) == 0) {
+                return mid;
+            } else if (cari.compareToIgnoreCase(listBk[mid].judulBuku) < 0) {
+                return FindBinarySearchJudBuku(cari, left, mid - 1);
+            } else {
+                return FindBinarySearchJudBuku(cari, mid + 1, right);
+            }
+        }
+        return -1;
+    }
+    public int FindseqSearchJudBuku (String cari){
+        int posisi = -1;
+        for (int i = 0; i < listBk.length; i++) {
+            if (cari.compareToIgnoreCase(listBk[i].judulBuku)==0) {
+                posisi=i;
+                break;
+            }
+        }
+        return posisi;
+    }
+    public void BubbleSortKode(){
         for (int i = 0; i < listBk.length-1; i++) {
             for (int j = 0; j < listBk.length-1; j++) {
-                if (listBk[j].kodeBuku.compareTo(listBk[j+1].kodeBuku)>0) {
+                if (listBk[j].kodeBuku.compareToIgnoreCase(listBk[j+1].kodeBuku)>0) {
+                    Buku10 tempBk = listBk[j];
+                    listBk[j]=listBk[j+1];
+                    listBk[j+1]=tempBk;
+                }
+            }
+        }
+    }
+    public void BubbleSortJudulBuku(){
+        for (int i = 0; i < listBk.length-1; i++) {
+            for (int j = 0; j < listBk.length-i-1; j++) {
+                if (listBk[j].judulBuku.compareToIgnoreCase(listBk[j+1].judulBuku)>0) {
                     Buku10 tempBk = listBk[j];
                     listBk[j]=listBk[j+1];
                     listBk[j+1]=tempBk;

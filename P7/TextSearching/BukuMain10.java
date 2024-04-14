@@ -22,31 +22,47 @@ public class BukuMain10 {
         data.tambah(m3);
         data.tambah(m4);
 
-        // System.out.println("==============================");
-        // System.out.println("Data keseluruhan buku: ");
-        // data.tampil();
         System.out.println("==============================");
-        System.out.println("==============================");
-        System.out.println("Pencarian data :");
-        System.out.println("Masukkan kode buku yang dicari:");
-        System.out.print("Kode buku: ");
-        String cari = inputint10.nextLine();
-        System.out.println("Menggunakan sequencial search");
-        int posisi = data.FindseqSearch(cari);
-        data.TampilPosisi(cari, posisi);
-        data.tampilData(cari, posisi);
-        // System.out.println("Menggunakan Method Find Buku");
-        // Buku10 dataBuku = data.FindBuku(cari);
-        // if (dataBuku!=null) {
-        //     dataBuku.tampilDataBuku();            
-        // } else{
-        //     System.out.println("Data tidak ditemukan");
-        // }
-        System.out.println("==============================");
-        System.out.println("Menggunakan Binary Search");
-        // data.BubbleSort();
-        posisi = data.FindBinarySearch(cari, 0, jumBuku-1);
-        data.TampilPosisi(cari, posisi);
-        data.tampilData(cari, posisi);
+        System.out.println("Melakukan pencarian data berdasarkan: ");
+        System.out.println("1. Kode Buku");
+        System.out.println("2. Judul Buku");
+        int input = inputint10.nextInt();
+        if (input==1) {
+            System.out.println("Masukkan kode buku yang dicari:");
+            System.out.print("Kode buku: ");
+            String cari = inputStr10.nextLine();
+            System.out.println("Menggunakan sequencial search");
+            int posisi = data.FindseqSearch(cari);
+            data.TampilPosisi(cari, posisi);
+            data.tampilData(cari, posisi);
+            // System.out.println("Menggunakan Method Find Buku");
+            // Buku10 dataBuku = data.FindBuku(cari);
+            // if (dataBuku!=null) {
+            //     dataBuku.tampilDataBuku();            
+            // } else{
+            //     System.out.println("Data tidak ditemukan");
+            // }
+            System.out.println("==============================");
+            System.out.println("Menggunakan Binary Search");
+            posisi = data.FindBinarySearch(cari, 0, jumBuku-1);
+            data.TampilPosisi(cari, posisi);
+            data.tampilData(cari, posisi);
+        } else if (input==2) {
+            data.BubbleSortJudulBuku();
+            System.out.println("Masukkan Judul Buku Yang Dicari");
+            System.out.print("Judul Buku : ");
+            String cari = inputStr10.nextLine();
+            System.out.println("Data diurutkan berdasarkan judul");
+            System.out.println("Menggunakan Sequencial Search");
+            int posisi = data.FindseqSearchJudBuku(cari);
+            data.TampilPosisi(cari, posisi);
+            data.tampilData(cari, posisi);
+            System.out.println("==============================");
+            System.out.println("Menggunakan Binary Search");
+            // data.tampil();
+            posisi = data.FindBinarySearchJudBuku(cari, 0, 4);
+            data.TampilPosisi(cari, posisi);
+            data.tampilData(cari, posisi);
+        }
     }
 }
