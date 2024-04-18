@@ -15,7 +15,9 @@ public class Utama10 {
             System.out.println("2. Ambil Barang");
             System.out.println("3. Tampilkan Tumpukan Barang");
             System.out.println("4. Lihat Barang Teratas");
-            System.out.println("5. Keluar");
+            System.out.println("5. Lihat Barang terbawah");
+            System.out.println("6. Cari Barang");
+            System.out.println("7. Keluar");
             System.out.print("Pilih Operasi: ");
             int pilihan = input10.nextInt();
             switch (pilihan) {
@@ -38,9 +40,31 @@ public class Utama10 {
                 case 4: 
                     gudang.lihatBarangTeratas();
                     break;
-                case 5: 
+                case 5:
+                    gudang.lihatBarangterbawah();
                     break;
-                default:
+                case 6: 
+                    System.out.println("Cari barang berdasarkan ");
+                    System.out.println("1. Kode\n2. Barang");
+                    int berdasarkan = input10.nextInt();
+                    int cariKode=0;
+                    String cariNama="";
+                    switch (berdasarkan) {
+                        case 1:
+                            System.out.print("Masukkan kode: ");
+                            cariKode = input10.nextInt();
+                            break;
+                        case 2:
+                            System.out.print("Masukkan nama: ");
+                            cariNama = inputstr10.nextLine();
+                        default:
+                            break;
+                    }
+                    gudang.cariBarang(berdasarkan, cariKode, cariNama);
+                    break;
+                case 7:
+                    break;
+                    default:
                     System.out.println("Pilihan yang anda input tidak valid");
             }
         }
