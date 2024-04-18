@@ -48,7 +48,7 @@ public class Gudang10 {
     }
 
     public Barang10 lihatBarangTeratas (){
-        if (!isEmpty()) {
+        if (!cekKosong()) {
             Barang10 barangTeratas = tumpukan[top];
             System.out.println("Barang teratas: "+barangTeratas.nama);
             return barangTeratas;
