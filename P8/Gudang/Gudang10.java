@@ -1,4 +1,4 @@
-package P8;
+package P8.Gudang;
 
 public class Gudang10 {
     Barang10[] tumpukan;
@@ -83,4 +83,5 @@ public class Gudang10 {
         }
         return biner;
     }
+
 }
