@@ -27,6 +27,7 @@ public class Queue {
             return false;
         }
     }
+    
     public void Enqueue (Pembeli dt){
         if (IsFull()) {
             System.out.println("Queue sudah penuh");
@@ -98,19 +99,25 @@ public class Queue {
         }
     }
 
-    public int peekPosition(String cari){
-        int index = -1;
+    public Pembeli peekPosition(String cari){
+        Pembeli dicari = new Pembeli();
         if (!IsEmpty()) {
-            for (int i = 0; i < antrian.length; i++) {
+            int i = front;
+            while (i != rear) {                    
                 if (cari.compareToIgnoreCase(antrian[i].nama)==0) {
-                    index=i;
-                    break;
+                    dicari=antrian[i];
+                    return dicari;
                 }
+                i = (i+1)%max;
+            }
+            if (cari.compareToIgnoreCase(antrian[i].nama)==0) {
+                dicari=antrian[i];
+                return dicari;
             }
         } else{
             System.out.println("Queue masih kosong");
         }
-        return index;
+        return dicari;
     } 
     
     public void daftarPembeli(){

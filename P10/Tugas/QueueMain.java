@@ -10,7 +10,8 @@ public class QueueMain {
         System.out.println("3. Cek Pembeli Terdepan");
         System.out.println("4. Cek Semua Pembeli Yang Mengantri");
         System.out.println("5. Cek Pembeli Paling Belakang");
-        System.out.println("6. Cek Seluruh Pembeli");
+        System.out.println("6. Cari Pembeli Berdasarkan Nama");
+        System.out.println("7. Cek Seluruh Pembeli");
         System.out.println("-------------------------------------");
     }
     public static void main(String[] args) {
@@ -50,13 +51,23 @@ public class QueueMain {
                 case 5:
                     antri.peekRear();
                     break;
-                case 6: 
+                case 6:
+                    System.out.print("Masukkan Nama Pembeli: ");
+                    String cari = inputstr10.nextLine();
+                    Pembeli dicari = antri.peekPosition(cari);
+                    if (dicari.noHp!=0) {
+                        System.out.println(dicari.nama+" "+dicari.noHp);
+                    }else{
+                        System.out.println("Data tidak ditemukan");
+                    }
+                    break;
+                case 7: 
                     antri.daftarPembeli();
                     break;
                 default:
                 break;
             }
-        } while (pilih==1 ||pilih ==2 || pilih ==3 || pilih ==4 || pilih==5||pilih==6);
+        } while (pilih==1 ||pilih ==2 || pilih ==3 || pilih ==4 || pilih==5||pilih==6||pilih==7);
         
     }
 }
