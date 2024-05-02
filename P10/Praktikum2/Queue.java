@@ -51,11 +51,11 @@ public class Queue {
         } else {
             int i = front;
             while (i != rear) {
-                System.out.println("Elemen terdepan: "+data[i].norek+" "+data[i].nama+" "+
+                System.out.println(data[i].norek+" "+data[i].nama+" "+
                     data[i].alamat+" "+ data[i].umur+" "+data[i].saldo);    
                 i = (i+1)%max;
             }
-            System.out.println("Elemen terdepan: "+data[i].norek+" "+data[i].nama+" "+
+            System.out.println(data[i].norek+" "+data[i].nama+" "+
             data[i].alamat+" "+ data[i].umur+" "+data[i].saldo);
             System.out.println("Jumlah elemen = "+ size);
         }
