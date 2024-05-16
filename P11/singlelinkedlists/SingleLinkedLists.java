@@ -129,7 +129,7 @@ public class SingleLinkedLists {
             System.out.println("Linked List Masih Kosong, tidak dapat dihapus");
         } else {
             Node temp = head;
-            while (temp!=null) {
+            while (temp!=tail) {
                 if (temp.data == key && temp == head) {
                     removeFirst();
                     break;
