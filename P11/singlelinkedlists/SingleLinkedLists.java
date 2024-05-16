@@ -120,7 +120,7 @@ public class SingleLinkedLists {
                 temp = temp.next;
             }
             tail = temp.next;
-            temp.next=null;
+            temp.next.next=null;
         } 
     }
 
