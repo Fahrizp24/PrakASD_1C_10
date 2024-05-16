@@ -1,4 +1,4 @@
-package P11.Tugas_P11;
+package P11.Tugas1_P11;
 
 public class SLLMainTugasp11 {
     public static void main(String[] args) {
