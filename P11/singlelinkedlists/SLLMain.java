@@ -15,5 +15,16 @@ public class SLLMain {
         singLl.inserAt(3, 833);
         singLl.print();
 
+        System.out.println("Data pada index ke 1 = "+singLl.getData(1));
+        System.out.println("Data 3 berada ada index ke-"+singLl.indexOf(760));
+    
+        singLl.remove(999);
+        singLl.print();
+        singLl.removeAt(0);
+        singLl.print();
+        singLl.removeFirst();
+        singLl.print();
+        singLl.removeLast();
+        singLl.print();
     }
 }
