@@ -79,4 +79,59 @@ public class DoubleLinkedList10 {
             System.out.println("Linked list kosong");
         }
     }
+
+    public void removeFirst() throws Exception{
+        if (isEmpty()) {
+            throw new Exception("Linked List Masih Kosong, tidak dapat dihapus");
+        }else if (size==1) {
+            removeLast();
+        }else {
+            head = head.next;
+            head.prev=null;
+            size--;
+        }
+    }
+
+    public void removeLast ()throws Exception{
+        if (isEmpty()) {
+            throw new Exception("Linked list masih kosong, belum dapat dihapus");
+        }else if (head.next==null) {
+            head=null;
+            size--;
+            return;
+        }else {
+            Node10 temp = head;
+            while (temp.next.next !=null) {
+                temp=temp.next;
+            }
+            temp.next=null;
+            size--;
+        }
+    }
+
+    public void remove(int index)throws Exception{
+        if (isEmpty()||index>=size||index<size-1) {
+            throw new Exception("Nilai index diluar batas");
+        }else if (index==0) {
+            removeFirst();;
+        }else{
+            Node10 temp = head;
+            int i = 0;
+            while (i<index) {
+                temp=temp.next;
+                i++;
+            }
+            if (temp.next==null) {
+                temp.prev.next=null;
+            } else if (temp.prev==null) {
+                temp = temp.next;
+                temp.prev=null;
+                head=temp;
+            } else {
+                temp.prev.next=temp.next;
+                temp.next.prev=temp.prev;
+            }
+            size--;
+        }
+    }
 }
