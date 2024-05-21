@@ -110,7 +110,7 @@ public class DoubleLinkedList10 {
     }
 
     public void remove(int index)throws Exception{
-        if (isEmpty()||index>=size||index<size-1) {
+        if (isEmpty()||index>=size||index<0) {
             throw new Exception("Nilai index diluar batas");
         }else if (index==0) {
             removeFirst();;
@@ -133,5 +133,34 @@ public class DoubleLinkedList10 {
             }
             size--;
         }
+    }
+
+    public int getFirst()throws Exception{
+        if (isEmpty()) {
+            throw new Exception("Linked list Kosong");
+        }
+        return head.data;
+    }
+
+    public int getLast ()throws Exception{
+        if (isEmpty()) {
+            throw new Exception("Linked List Kosong");
+        }
+        Node10 temp = head;
+        while (temp.next!=null) {
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+
+    public int get (int index)throws Exception{
+        if (isEmpty()||index>=size||index<0) {
+            throw new Exception("Nilai index di luar batas");
+        }
+        Node10 temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp.data;
     }
 }
