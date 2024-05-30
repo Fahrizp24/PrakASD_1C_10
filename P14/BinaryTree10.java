@@ -166,4 +166,26 @@ public class BinaryTree10 {
             }
         }
     }
+
+    void addRekursif (Node10 node,int data){
+        if (isEmpty()) {
+            root = new Node10(data);
+        } else {
+            if (data<node.data) {
+                if (node.left!=null) {
+                    addRekursif(node.left, data);
+                }else{
+                    node.left = new Node10(data);
+                    return;
+                }
+            }else if (data>node.data) {
+                if (node.right!=null) {
+                    addRekursif(node.right, data);
+                }else{
+                    node.right=new Node10(data);                    }
+            }else{
+                System.out.println("Data sudah ada");;//data is already exist
+            }
+        }
+    }
 }

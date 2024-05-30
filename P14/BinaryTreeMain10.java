@@ -28,5 +28,9 @@ public class BinaryTreeMain10 {
         System.out.print("PreOrder Traversal: ");
         bt.traversePreorder(bt.root);
         System.out.println("");
+        bt.addRekursif(bt.root, 20);
+        System.out.println("Tambah Node 20 secara rekursif");
+        bt.traverseInOrder(bt.root);
+        System.out.println("");
     }
 }
