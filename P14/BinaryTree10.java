@@ -188,4 +188,20 @@ public class BinaryTree10 {
             }
         }
     }
+
+    int FindTerkecil(){
+        Node10 current = root;
+        while (current.left!=null) {
+            current=current.left;
+        }
+        return current.data;
+    }
+
+    int FindTerbesar(){
+        Node10 current = root;
+        while (current.right!=null) {
+            current=current.right;
+        }
+        return current.data;
+    }
 }

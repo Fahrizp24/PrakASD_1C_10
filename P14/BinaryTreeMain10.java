@@ -32,5 +32,8 @@ public class BinaryTreeMain10 {
         System.out.println("Tambah Node 20 secara rekursif");
         bt.traverseInOrder(bt.root);
         System.out.println("");
+        System.out.println("Data terkecil: "+bt.FindTerkecil());
+        System.out.println("Data terbesar: "+bt.FindTerbesar());
+        System.out.println();
     }
 }
