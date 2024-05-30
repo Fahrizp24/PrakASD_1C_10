@@ -37,5 +37,7 @@ public class BinaryTreeMain10 {
         System.out.println();
         System.out.print("Cetak Leaf: ");
         bt.TampilDataLeaf(bt.root);
+        System.out.println();
+        System.out.println("Jumlah leaf yang ada di tree:"+bt.JumlahLeaf(bt.root));
     }
 }

@@ -214,4 +214,17 @@ public class BinaryTree10 {
             }
         }
     }
+
+    int JumlahLeaf(Node10 node){
+        // diberikan if lebhi dahulu untuk mengecek, apabila node adalah daun
+        // akan mereturn 1
+        if (node==null) {
+            return 0;
+        } else if (node.left==null && node.right==null) {
+            return 1;
+        }
+        int jumlahKiri = JumlahLeaf(node.left);
+        int jumlahKanan = JumlahLeaf(node.right);
+        return jumlahKanan+jumlahKiri;  
+    }
 }
