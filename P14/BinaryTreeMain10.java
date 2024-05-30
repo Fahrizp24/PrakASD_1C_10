@@ -35,5 +35,7 @@ public class BinaryTreeMain10 {
         System.out.println("Data terkecil: "+bt.FindTerkecil());
         System.out.println("Data terbesar: "+bt.FindTerbesar());
         System.out.println();
+        System.out.print("Cetak Leaf: ");
+        bt.TampilDataLeaf(bt.root);
     }
 }

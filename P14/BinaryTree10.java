@@ -204,4 +204,14 @@ public class BinaryTree10 {
         }
         return current.data;
     }
+
+    void TampilDataLeaf(Node10 node){
+        if (node!=null) {
+            TampilDataLeaf(node.left);
+            TampilDataLeaf(node.right);   
+            if (node.left==null&&node.right==null) {
+                System.out.print(" "+node.data);
+            }
+        }
+    }
 }
