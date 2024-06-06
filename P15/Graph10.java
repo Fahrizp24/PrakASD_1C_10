@@ -67,4 +67,17 @@ public class Graph10 {
         }
         System.out.println();
     }
+    
+    public int cekTetangga(int asal, int tujuan)throws Exception{
+        for (int i = 0; i < vertex; i++) {
+            if (list[i].size()>0) {
+                for (int j = 0; j < list[i].size(); j++) {
+                    if (j==tujuan) {
+                        return 1;
+                    }
+                }
+            }
+        }
+        return 0;
+    }
 }
