@@ -16,27 +16,27 @@ public class GraphMain10 {
         // gedung.printGraph();
         // gedung.removeEdge(1, 3);
         // gedung.printGraph();
-        System.out.print("Masukkan Gedung Asal: ");
-        int asal = input.nextInt();
-        System.out.print("Masukkan Gedung Tujuan: ");
-        int tujuan = input.nextInt();
-        int jarak = gedung.cekTetangga(asal, tujuan);
-        if (jarak!=0) {
-            System.out.println("Gedung "+(char) ('A'+asal)+" dan "+(char)('A'+tujuan)+" Bertetangga");
-        }else{
-            System.out.println("Gedung "+(char) ('A'+asal)+" dan "+(char)('A'+tujuan)+" Tidak Bertetangga");
-        }
+        // System.out.print("Masukkan Gedung Asal: ");
+        // int asal = input.nextInt();
+        // System.out.print("Masukkan Gedung Tujuan: ");
+        // int tujuan = input.nextInt();
+        // int jarak = gedung.cekTetangga(asal, tujuan);
+        // if (jarak!=0) {
+        //     System.out.println("Gedung "+(char) ('A'+asal)+" dan "+(char)('A'+tujuan)+" Bertetangga");
+        // }else{
+        //     System.out.println("Gedung "+(char) ('A'+asal)+" dan "+(char)('A'+tujuan)+" Tidak Bertetangga");
+        // }
 
-        // GraphMatriks10 gdg = new GraphMatriks10(4);
-        // gdg.makeEdge(0, 1, 50);
-        // gdg.makeEdge(1, 0, 60);
-        // gdg.makeEdge(1, 2, 70);
-        // gdg.makeEdge(2, 1, 80);
-        // gdg.makeEdge(2, 3, 40);
-        // gdg.makeEdge(3, 0, 90);
-        // gdg.printGraph();
-        // System.out.println("Hasil Setelah Penghapusan Edge");
-        // gdg.removeEdge(2, 1);
-        // gdg.printGraph();
+        GraphMatriks10 gdg = new GraphMatriks10(4);
+        gdg.makeEdge(0, 1, 50);
+        gdg.makeEdge(1, 0, 60);
+        gdg.makeEdge(1, 2, 70);
+        gdg.makeEdge(2, 1, 80);
+        gdg.makeEdge(2, 3, 40);
+        gdg.makeEdge(3, 0, 90);
+        gdg.printGraph();
+        System.out.println("Hasil Setelah Penghapusan Edge");
+        gdg.removeEdge(2, 1);
+        gdg.printGraph();
     }
 }

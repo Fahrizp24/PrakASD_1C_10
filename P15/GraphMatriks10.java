@@ -24,6 +24,7 @@ public class GraphMatriks10 {
                 if (matriks[i][j]!=-1) {
                     System.out.print("Gedung"+(char) ('A'+j)+"( "+ matriks[i][j]+" m),");
                 }
+                
             }
             System.out.println();
         }
