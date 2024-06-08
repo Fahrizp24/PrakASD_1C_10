@@ -72,7 +72,7 @@ public class Graph10 {
         for (int i = 0; i < vertex; i++) {
             if (list[i].size()>0) {
                 for (int j = 0; j < list[i].size(); j++) {
-                    if (j==tujuan) {
+                    if (i==asal&&tujuan==list[i].get(j)) {
                         return 1;
                     }
                 }
