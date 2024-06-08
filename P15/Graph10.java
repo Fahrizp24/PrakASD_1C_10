@@ -80,4 +80,13 @@ public class Graph10 {
         }
         return 0;
     }
+
+    public void updateJarak (int asal, int tujuan,int jarak){
+        for (int i = 0; i < vertex; i++) {
+            if (i==tujuan) {
+                list[asal].updateJarak(tujuan, jarak);;
+            }
+        }
+    }
+
 }

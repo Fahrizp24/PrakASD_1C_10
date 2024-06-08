@@ -52,6 +52,7 @@ public class GraphMain10 {
             System.out.println("3. Degree");
             System.out.println("4. Print Graph");
             System.out.println("5. Cek Edge");
+            System.out.println("6. Update Jarak");
             System.out.print("Menu:");
             pilih = input.nextInt();
             switch (pilih) {
@@ -99,6 +100,20 @@ public class GraphMain10 {
                             System.out.print((char) ('A'+gedung.list[cekAsal].get(j))+"( "+ gedung.list[cekAsal].getJarak(j)+" m),");
                         }
                         System.out.println();
+                    }
+                    break;
+                case 6:
+                    System.out.print("Gedung Asal: ");
+                    int updateAsal=input.nextInt();
+                    System.out.print("Gedung Tujuan: ");
+                    int updateTujuan=input.nextInt();
+                    System.out.print("Jarak Baru: ");
+                    int updateJarak=input.nextInt();
+                    if (gedung.cekTetangga(updateAsal, updateTujuan)!=0) {
+                        gedung.updateJarak(updateAsal, updateTujuan, updateJarak);
+                        System.out.println("Update Berhasil");
+                    }else{
+                        System.out.println("tidak ada edge yang bisa di update");
                     }
                     break;
                 default:

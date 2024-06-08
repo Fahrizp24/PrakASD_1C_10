@@ -74,4 +74,15 @@ public class DoubleLinkedList10 {
         head = null;
         size = 0;
     }
+
+    public void updateJarak (int index,int Jarak){
+        if (isEmpty()||index>=size) {
+            return;
+        }
+        Node10 temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        temp.jarak=Jarak;
+    }
 }
