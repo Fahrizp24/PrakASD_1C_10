@@ -53,6 +53,7 @@ public class GraphMain10 {
             System.out.println("4. Print Graph");
             System.out.println("5. Cek Edge");
             System.out.println("6. Update Jarak");
+            System.out.println("7. Hitung Edge yang Berada di Dalam Graf");
             System.out.print("Menu:");
             pilih = input.nextInt();
             switch (pilih) {
@@ -115,6 +116,9 @@ public class GraphMain10 {
                     }else{
                         System.out.println("tidak ada edge yang bisa di update");
                     }
+                    break;
+                case 7:
+                    gedung.hitungEdges();
                     break;
                 default:
                     break;

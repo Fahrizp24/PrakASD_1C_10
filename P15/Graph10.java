@@ -89,4 +89,16 @@ public class Graph10 {
         }
     }
 
+    public void hitungEdges(){
+        int totalIn = 0;
+        for (int i = 0; i < vertex; i++) {
+            //inDgree
+            for (int j = 0; j < list[i].size; j++) {
+               totalIn++;
+            }
+            //outDegree
+        }
+        System.out.println("Edge yang terdapat pada graf sebanyak "+(totalIn));
+    }
+
 }
