@@ -74,8 +74,8 @@ public class GraphMain10 {
                     int hapusAsal = input.nextInt();
                     System.out.print("Tujuan Edge: ");
                     int hapusTujuan=input.nextInt();
-                    System.out.println(gedung.cekTetangga(hapusAsal, hapusTujuan)!=0);
-                    if (gedung.list[hapusAsal].getJarak(hapusTujuan)==0) {
+                    System.out.println(gedung.cekTetangga(hapusAsal, hapusTujuan));
+                    if (gedung.cekTetangga(hapusAsal, hapusTujuan)==0) {
                         System.out.println("Tidak ada edge dengan asal dan tujuan yang sama");
                     }else{
                         gedung.removeEdge(hapusAsal, hapusTujuan);
