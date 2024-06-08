@@ -18,17 +18,15 @@ public class DoubleLinkedList10 {
     }
 
     public int get (int index) {
-        int jarak=0;
         if (isEmpty()||index>=size||index<0) {
             System.out.println("Nilai index di luar batas");
-            return jarak;
+            return 0;
         }
         Node10 temp = head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-        jarak=temp.data;
-        return jarak;
+        return temp.data;
     }
 
     public void addFirst(int input, int jarak){
@@ -44,7 +42,7 @@ public class DoubleLinkedList10 {
 
     public int getJarak (int index)throws Exception{
         if (isEmpty()||index>=size) {
-            throw new Exception("Nilai indeks di luar batas");
+            return 0;
         }
         Node10 temp = head;
         for (int i = 0; i < index; i++) {
